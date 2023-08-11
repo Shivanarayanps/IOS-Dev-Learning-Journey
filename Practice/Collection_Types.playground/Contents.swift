@@ -128,4 +128,24 @@ airports["APL"] = "Apple International"
 
 airports["APL"] = nil
 
+if let removedValue = airports.removeValue(forKey: "DUB") {
+    print("The removed airport's name is \(removedValue).")
+} else {
+    print("The airports dictionary doesn't contain a value for DUB.")
+}
 
+for (airportCode, airportName) in airports {
+    print("\(airportCode): \(airportName)")
+}
+
+for airportCode in airports.keys {
+    print("Airport code: \(airportCode)")
+}
+
+for airportName in airports.values {
+    print("Airport name: \(airportName)")
+}
+
+let airportCodes = [String](airports.keys)
+
+let airportNames = [String](airports.values)
